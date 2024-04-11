@@ -43,8 +43,8 @@ install_shopify_cli_theme() {
 # addgroup shopify
 addgroup_shopify() {
     echo "Menambahkan grup shopify..."
-    sudo addgroup shopify
-    sudo addgroup shopify $USER
+    sudo groupadd shopify || true # Ignore if group already exists
+    sudo usermod -aG shopify $USER
 }
 
 # Cek versi Shopify
