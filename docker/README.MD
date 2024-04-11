@@ -20,22 +20,22 @@ Deploy Docker on your Raspberry Pi with a single command. Choose between `curl` 
 
 bashCopy code
 
-`curl -sL https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookworm/docker/docker.sh | bash`
+```bash
+curl -sL https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookworm/docker/docker.sh | bash
+```
 
 ### 📥 Using `wget`:
 
 bashCopy code
 
-`wget -qO- https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookworm/docker/docker.sh | bash`
+```bash
+wget -qO- https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookworm/docker/docker.sh | bash
+```
 
 🔄 Post-Installation Steps
 --------------------------
 
 After Docker is successfully installed on your Raspberry Pi, it's recommended to reboot your device to ensure all changes take effect properly.
-
-bashCopy code
-
-`sudo reboot`
 
 📚 Documentation & Resources
 ----------------------------
