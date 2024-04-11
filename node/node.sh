@@ -21,6 +21,13 @@ configure_npm() {
     source ~/.profile
 }
 
+# Upgrade npm to latest version
+upgrade_npm() {
+    echo "Upgrade npm to latest version..."
+    sudo npm install -g n
+    sudo n latest
+}
+
 # Check Node.js and npm versions
 check_versions() {
     echo "Checking Node.js and npm versions..."
