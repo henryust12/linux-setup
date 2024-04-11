@@ -17,6 +17,7 @@ curl -sL https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookwo
 ##### or wget
 
 ```bash
+wget -qO- https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookworm/docker/docker.sh | bash
 ```
 
 #### after installation exit super user mode by command
