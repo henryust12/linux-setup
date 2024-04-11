@@ -30,8 +30,8 @@ configure_npm_user() {
 # Upgrade npm to latest version
 upgrade_npm() {
     echo "Upgrade npm to latest version..."
-    npm install -g n
-    n latest
+    sudo npm install -g n
+    sudo n latest
 }
 
 # Check Node.js and npm versions
