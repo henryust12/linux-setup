@@ -9,13 +9,7 @@ setup_environment() {
 # System update and upgrade
 system_update() {
     echo "Updating and upgrading the system packages..."
-    sudo apt update -y && sudo apt upgrade -y
-}
-
-# Install Git
-install_git() {
-    echo "Installing Git..."
-    sudo apt install git -y
+    sudo apt-get update -y && sudo apt-get upgrade -y
 }
 
 # Download Docker packages
@@ -63,7 +57,7 @@ cleanup() {
 # Fix potential broken installations
 fix_broken_install() {
     echo "Fixing broken installations if any..."
-    sudo apt --fix-broken install -y
+    sudo apt-get --fix-broken install -y
 }
 
 # Test Docker installation
