@@ -40,6 +40,7 @@ main() {
     system_update
     install_node
     configure_npm
+    upgrade_npm
     check_versions
 }
 
