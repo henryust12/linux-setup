@@ -11,7 +11,7 @@ sudo su
 ##### curl
 
 ```bash
-sudo su
+curl -sL https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookworm/docker/docker.sh | bash
 ```
 
 ##### or wget
