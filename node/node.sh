@@ -12,6 +12,19 @@ install_node() {
     sudo apt-get install -y nodejs npm
 }
 
+# Upgrade npm to latest version
+upgrade_npm() {
+    echo "Upgrade npm to latest version..."
+    sudo npm install -g n
+    sudo n latest
+}
+
+configure_npm_user() {
+    echo "Adding 'npm' group and assigning the current user..."
+    sudo groupadd npm
+    sudo usermod -aG npm $USER
+}
+
 # Configure npm to use the npm packages without sudo
 configure_npm() {
     echo "Configuring npm to use the npm packages without sudo..."
@@ -19,19 +32,6 @@ configure_npm() {
     npm config set prefix '~/.npm-global'
     echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.profile
     source ~/.profile
-}
-
-configure_npm_user() {
-    echo "Adding 'npm' group and assigning the current user..."
-    sudo groupadd npm || true # Ignore if group already exists
-    sudo usermod -aG npm $USER
-}
-
-# Upgrade npm to latest version
-upgrade_npm() {
-    echo "Upgrade npm to latest version..."
-    sudo npm install -g n
-    sudo n latest
 }
 
 # Check Node.js and npm versions
@@ -45,9 +45,9 @@ check_versions() {
 main() {
     system_update
     install_node
-    configure_npm
     upgrade_npm
     configure_npm_user
+    configure_npm    
     check_versions
 }
 
