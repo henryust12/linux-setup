@@ -35,3 +35,5 @@ main() {
     configure_npm
     check_versions
 }
+
+main
