@@ -9,14 +9,17 @@ system_update() {
 # Install Node.js and npm
 install_node() {
     echo "Installing Node.js and npm..."
+    # Install Node.js and npm from the repositories
     sudo apt-get install -y nodejs npm
+    # Now use 'n' to upgrade to the latest version of Node.js
+    sudo npm install -g n
+    sudo n stable
 }
 
 # Upgrade npm to latest version
 upgrade_npm() {
-    echo "Upgrade npm to latest version..."
-    sudo npm install -g n
-    sudo n latest
+    echo "Upgrading npm to latest version..."
+    sudo npm install -g npm@latest
 }
 
 configure_npm_user() {
