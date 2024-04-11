@@ -13,13 +13,7 @@ install_node() {
     sudo apt-get install -y nodejs npm
     # Now use 'n' to upgrade to the latest version of Node.js
     sudo npm install -g n
-    sudo n stable
-}
-
-# Upgrade npm to latest version
-upgrade_npm() {
-    echo "Upgrading npm to latest version..."
-    sudo npm install -g npm@latest
+    sudo n latest
 }
 
 configure_npm_user() {
@@ -48,7 +42,6 @@ check_versions() {
 main() {
     system_update
     install_node
-    upgrade_npm
     configure_npm_user
     configure_npm    
     check_versions
