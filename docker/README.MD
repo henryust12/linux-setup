@@ -25,3 +25,5 @@ wget -qO- https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookw
 ```bash
 exit
 ```
+
+#### after installation, reboot rpi
