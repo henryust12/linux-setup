@@ -9,7 +9,7 @@ setup_environment() {
 # System update and upgrade
 system_update() {
     echo "Updating and upgrading the system packages..."
-    sudo apt update -y && apt upgrade -y
+    sudo apt update -y && sudo apt upgrade -y
 }
 
 # Install Git
