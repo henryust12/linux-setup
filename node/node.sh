@@ -21,6 +21,12 @@ configure_npm() {
     source ~/.profile
 }
 
+configure_npm_user() {
+    echo "Adding 'npm' group and assigning the current user..."
+    sudo groupadd npm || true # Ignore if group already exists
+    sudo usermod -aG npm $USER
+}
+
 # Upgrade npm to latest version
 upgrade_npm() {
     echo "Upgrade npm to latest version..."
@@ -41,6 +47,7 @@ main() {
     install_node
     configure_npm
     upgrade_npm
+    configure_npm_user
     check_versions
 }
 
