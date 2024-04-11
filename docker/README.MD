@@ -1,26 +1,54 @@
-# Docker
+<div align="center">
 
-#### before installation enter super user mode by command
+🐳 Docker Setup for Raspberry Pi
+================================
 
-```bash
-sudo su
-```
+A seamless setup script for Docker on Raspberry Pi.
 
-#### install docker by this command
+[Linux Setup](https://github.com/henryust12/linux-setup)
 
-##### curl
+[Docker](https://www.docker.com/)
 
-```bash
-sudo su
-```
+</div>
 
-##### or wget
+🚀 Quick Start
+--------------
 
-```bash
-```
+Deploy Docker on your Raspberry Pi with a single command. Choose between `curl` or `wget` to kickstart the installation.
 
-#### after installation exit super user mode by command
+### 🖥 Using `curl`:
 
-```bash
-exit
-```
+bashCopy code
+
+`curl -sL https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookworm/docker/docker.sh | bash`
+
+### 📥 Using `wget`:
+
+bashCopy code
+
+`wget -qO- https://raw.githubusercontent.com/henryust12/linux-setup/rpi-4-B-bookworm/docker/docker.sh | bash`
+
+🔄 Post-Installation Steps
+--------------------------
+
+After Docker is successfully installed on your Raspberry Pi, it's recommended to reboot your device to ensure all changes take effect properly.
+
+bashCopy code
+
+`sudo reboot`
+
+📚 Documentation & Resources
+----------------------------
+
+*   For more information on Docker, visit the official Docker documentation.
+*   Learn more about using Docker on Raspberry Pi in the Raspberry Pi Docker guide.
+
+🤝 Contributing
+---------------
+
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/henryust12/linux-setup/issues).
+
+📝 License
+----------
+
+Distributed under the MIT License. See `LICENSE` for more information.
